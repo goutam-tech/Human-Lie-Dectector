@@ -1,0 +1,56 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+d\sa200\sl276\slmult1\f0\fs22\lang9 
+
+### Summary of the Code
+This Python program performs real-time analysis of video input (either from a camera or screen capture) and processes facial landmarks, hand gestures, emotional states, eye blinks, lip compression, heart rate estimation, and gaze direction. It aims to detect various **tells** (e.g., emotional states, physical signs like hand on face, blinks, and more) using the **MediaPipe** and **FER** libraries. The processed data is displayed in a GUI window and optionally saved as a video file. \par
+
+Here are the main functionalities:
+- Facial Landmark Detection: The program uses **MediaPipe's Face Mesh** to detect key facial landmarks for tasks like blink detection and lip compression.\par
+- Hand Gesture Recognition: It also tracks hand positions using **MediaPipe's Hands**.
+- Emotion Detection: The program uses the **FER (Facial Expression Recognition)** library to detect emotions based on facial expressions.\par
+- Heart Rate Estimation: This is a placeholder function that can be expanded to track heart rate based on facial features.\par
+- BPM Chart**: It provides a real-time chart of heart rate variability using **matplotlib**.
+- Hand-on-Face Detection: Simple hand detection logic that flags when a hand is near the face.
+
+### **Libraries Used**\par
+
+1. **OpenCV** (`cv2`):
+   - Used for reading and processing video frames, drawing on frames (e.g., landmarks), and saving output videos.
+   
+2. **MediaPipe**:
+   - **FaceMesh**: Detects face landmarks and helps with facial feature tracking like blink detection, lip compression, etc.
+   - **Hands**: Detects hand positions and movements in the frame for hand gestures and hand-on-face detection.
+
+3. **FER (Facial Expression Recognition)**:
+   - A library for detecting emotions from facial expressions in real-time using pre-trained deep learning models.
+   
+4. **ffpyplayer**:r
+   - Used for playing audio/video if necessary; in this code, it's a part of video processing and playback.
+   
+5. **Matplotlib**:
+   - Used to create a **real-time heartbeat graph** (BPM chart), displaying heart rate data in an interactive plot.
+
+6. **mss**:
+   - Used for screen capturing, allowing the program to grab specific regions of the screen for analysis.
+
+7. **scipy**:
+   - Used for some signal processing like finding peaks, which might be applied to detect certain physiological markers (e.g., heart rate).
+   
+8. **datetime**:
+   - Used for timestamping filenames and events.
+
+9. **tkinter**:
+   -Used to displayed the the output on screen
+
+### **Core Functionality**
+- **Detection of emotional states** based on facial expressions.
+- **Tracking of eye blinks** by measuring distances between eye landmarks.
+- **Lip compression detection** for tracking stress or tension signs.
+- **Real-time heart rate graphing** using a basic pulse detection technique.
+- **Hand tracking and hand-on-face detection** for monitoring involuntary gestures.
+}
+
+{
+   
+}
